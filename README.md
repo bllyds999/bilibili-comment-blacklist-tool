@@ -3,6 +3,12 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://python.org)
 [![Playwright](https://img.shields.io/badge/Playwright-1.40%2B-green)](https://playwright.dev)
 
+> ⚠️ **免责声明 / Disclaimer**
+>
+> 使用 B 站 Cookie 运行本脚本有**封号风险**，请酌情考虑。本工具仅供学习研究使用，作者不对因使用本工具导致的任何后果负责。
+>
+> Running this script with your Bilibili Cookie carries a **risk of account suspension/ban**. Use at your own discretion. This tool is for educational purposes only. The author is not responsible for any consequences arising from its use.
+
 Automatically block commenters on Bilibili videos. Runs a headless browser, scrolls through the comment section, finds every comment's "more" menu, clicks "Block user" through nested Shadow DOMs, and confirms the dialog.
 
 自动遍历 B 站视频评论区，找到每条评论的「更多」按钮，穿透嵌套 Shadow DOM 点击「加入黑名单」，并自动确认弹窗。全无头浏览器运行。
