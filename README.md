@@ -52,15 +52,15 @@ Automatically block commenters on Bilibili videos. Runs a headless browser, scro
 ### 1. Clone / 克隆项目
 
 ```bash
-git clone <your-repo-url> demo6
+git clone https://github.com/bllyds999/bilibili-comment-blacklist-tool demo6
 cd demo6
 ```
 
 ### 2. Create virtual env / 创建虚拟环境
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate      # macOS / Linux
+python3 -m venv .venv
+source .venv/bin/activate      # macOS / Linux
 # or on Windows: venv\Scripts\activate
 ```
 
@@ -71,9 +71,9 @@ pip install -r requirements.txt
 playwright install chromium
 ```
 
-This installs Playwright in the local `venv/` and downloads a Chromium browser (~170 MB). Everything stays in the project — no system pollution.
+This installs Playwright in the local `.venv/` and downloads a Chromium browser (~170 MB). Everything stays in the project — no system pollution.
 
-(安装到本地 `venv/`，Chromium 浏览器也下载到用户缓存中，不污染系统环境)。
+(安装到本地 `.venv/`，Chromium 浏览器也下载到用户缓存中，不污染系统环境)。
 
 ### 4. Configure / 配置
 
@@ -115,7 +115,7 @@ Leave empty (`""`) if you want to type the URL each time you run.
 ## Usage / 使用方式
 
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 python main.py
 ```
 
@@ -190,7 +190,7 @@ B 站用 CSS 变量控制「更多」按钮显隐，默认 `display: none`，只
 demo6/
 ├── main.py              # Main script / 主程序
 ├── requirements.txt     # Python dependencies / Python 依赖
-├── venv/                # Virtual environment (created by setup) / 虚拟环境
+├── .venv/                # Virtual environment (created by setup) / 虚拟环境
 └── README.md            # This file / 本文件
 ```
 
