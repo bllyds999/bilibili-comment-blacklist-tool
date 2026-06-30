@@ -463,7 +463,10 @@ async def main():
       print("⚠️  页面加载超时，尝试继续...")
       await page.wait_for_timeout(3000)
 
-    await page.wait_for_load_state("networkidle", timeout=15000)
+    try:
+      await page.wait_for_load_state("load", timeout=15000)
+    except Exception:
+      pass
     print("✅ 页面加载完成")
 
     # 等待评论区渲染
